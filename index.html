@@ -76,7 +76,7 @@ button.q:focus-visible{outline:2px solid #fff}
 <main class="app">
   <section class="stage">
     <div class="avatar" id="avatar" aria-label="Dora, assistente virtual"><div class="corpo" id="corpo"></div></div>
-    <div class="caption" aria-live="polite"><b>Dora • Assistente Virtual</b><span id="cap">Olá! Escolha uma pergunta ao lado para eu contar uma curiosidade sobre Feira de Santana.</span><small id="status" style="display:block;margin-top:6px;color:var(--mut)"></small></div>
+    <div class="caption" aria-live="polite"><b>Dora • Assistente Virtual</b><span id="cap">Olá! Escolha uma pergunta ao lado para eu te falar alguma informação.</span><small id="status" style="display:block;margin-top:6px;color:var(--mut)"></small></div>
   </section>
   <aside class="side">
     <h2>Curiosidades de Feira de Santana</h2>
@@ -87,10 +87,10 @@ button.q:focus-visible{outline:2px solid #fff}
 <script>
 const perguntas=[
  {q:"Qual o tamanho de Feira de Santana?",t:"Boa pergunta. Olha só, segundo o censo de 2022 do IBGE, Feira de Santana tem 616.272 habitantes. Isso mesmo, é gente que não acaba mais. Somos a segunda cidade mais populosa da Bahia, só ficamos atrás de Salvador. Em 2010, eram cerca de 556 mil. Então, a cidade cresceu uns 11%. Ou seja, se a fila do ônibus anda grande, já sabe o motivo.",audio:"resposta-1.mp3"},
- {q:"Como a cidade surgiu?",t:"Tudo começou com uma feira de gado no século XIX, onde tropeiros paravam para negociar. O comércio fez o povoado crescer, e ele foi elevado a cidade em 1873.",audio:"resposta-2.mp3"},
- {q:"Por que é chamada de Portal do Sertão?",t:"Feira de Santana é um dos maiores entroncamentos rodoviários do Nordeste, cortada pelas rodovias BR-116 e BR-324. Por ali passam viajantes e cargas de todo o país. Isso a tornou a porta de entrada para o sertão baiano.",audio:"resposta-3.mp3"},
- {q:"O que é a Micareta?",t:"A Micareta é um carnaval fora de época que acontece em Feira de Santana desde 1937. É uma das mais tradicionais do Brasil e costuma ocorrer depois da Semana Santa.",audio:"resposta-4.mp3"},
- {q:"Que lugares culturais conhecer?",t:"A Universidade Estadual de Feira de Santana abriga o Museu Casa do Sertão, com objetos da cultura sertaneja e do vaqueiro. A cidade também tem o Estádio Joia da Princesa, casa do Fluminense de Feira.",audio:"resposta-5.mp3"}
+ {q:"Por que Feira é chamada de Princesa do Sertão ?",t:"Essa história é bem bonita. Em 1919, o grande Rui Barbosa visitou a nossa cidade. Na época, Feira já era um centro comercial importante, cheio de movimento por causa da feira de gado, e funcionava como porta de entrada para o sertão. Foi nessa visita que ele nos chamou de Princesa do Sertão, e o apelido pegou de vez. A gente também é conhecida como Portal do Sertão. E olha que até hoje ninguém pediu o título de volta.",audio:"resposta-2.mp3"},
+ {q:"Onde fica Feira de Santana ?",t:"Vou te passar o endereço. Feira de Santana fica na Bahia, a uns 110 km de Salvador. Se você estiver na capital, é só pegar a estrada e daqui a pouco já está por aqui, de preferência com um lanchinho na mochila. Nossa cidade fica num ponto especial. De um lado está o Recôncavo, pertinho do litoral, e do outro começa o sertão. Estamos no meio do caminho e é por isso que tanta gente passa por aqui.",audio:"resposta-3.mp3"},
+ {q:"Por que Feira é um grande entrocamento ?",t:"Aqui, todo caminho dá em feira. A BR-116 atravessa o país do Ceará ao Rio Grande do Sul, e a BR-324 liga a cidade direto a Salvador. Resultado: muita gente que viaja entre o litoral, o interior da Bahia, o Sudeste e outros estados do Nordeste passa por aqui. É herança dos tempos dos boiadeiros. Só que hoje o pessoal chega de caminhão e de carro, em vez de boi. Isso ajuda muito o comércio, a logística e a indústria da cidade. E se você se perder, relaxa. É só perguntar que alguém ensina o caminho.",audio:"resposta-4.mp3"},
+ {q:"O que é a micareta de Feira ?",t:"Prepare o abadá, porque agora o assunto é festa. A Micareta de Feira é o nosso carnaval fora de época, com blocos, trio elétrico e muita animação pelas ruas. A tradição é antiga. O trajeto histórico da festa, na Avenida Presidente Dutra, vem desde 1937. Como a data nem sempre é a mesma, a dica é conferir o calendário antes de comprar o glitter.",audio:"resposta-5.mp3"}
 ];
 
 /* Recortes em PIXELS da imagem original (766x766). x,y = centro do topo da peça; rot = graus.
