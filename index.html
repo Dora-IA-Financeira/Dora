@@ -297,8 +297,7 @@ function parar(){
   document.querySelectorAll(".q.on").forEach(b=>b.classList.remove("on"));
 }
 
-async function ask(i,btn){
-  const item=perguntas[i];
+async function ask(item, btn){
   if(audio){audio.pause();audio.onended=audio.onerror=null}
   if(fonte){fonte.disconnect();fonte=null}
   parar();
@@ -323,9 +322,31 @@ async function ask(i,btn){
     cap.textContent="Erro ao tocar o áudio ("+e.name+"). Confira ./audios/ e rode via Live Server.";
   }
 }
-perguntas.forEach((p,i)=>{
-  const b=document.createElement("button");b.className="q";b.textContent=p.q;
-  b.onclick=()=>ask(i,b);btns.appendChild(b);
+categorias.forEach(cat => {
+  // Cria a caixa da categoria
+  const details = document.createElement("details");
+  details.className = "tema";
+  
+  // Cria o título clicável
+  const summary = document.createElement("summary");
+  summary.textContent = cat.tema;
+  details.appendChild(summary);
+
+  // Cria a área interna para os botões
+  const div = document.createElement("div");
+  div.className = "tema-conteudo";
+
+  // Adiciona cada pergunta desta categoria
+  cat.perguntas.forEach(p => {
+    const b = document.createElement("button");
+    b.className = "q";
+    b.textContent = p.q;
+    b.onclick = () => ask(p, b);
+    div.appendChild(b);
+  });
+
+  details.appendChild(div);
+  btns.appendChild(details);
 });
 </script>
 </body>
